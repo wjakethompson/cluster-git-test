@@ -14,5 +14,6 @@ DATE=$(date '+%Y-%m-%d %H:%M:%S')
 
 git pull
 R --vanilla -f writetime.R
+git add systeim.txt
 git commit -m "`echo 'update output:' $DATE`"
 git push
