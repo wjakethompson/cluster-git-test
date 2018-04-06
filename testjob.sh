@@ -10,4 +10,9 @@
 
 cd $PBS_O_WORKDIR
 
+DATE=$(date '+%Y-%m-%d %H:%M:%S')
+
+git pull
 R --vanilla -f writetime.R
+git commit -m 'update output:' $DATE
+git push
